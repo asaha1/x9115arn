@@ -104,3 +104,7 @@ usage: easy_install [options] requirement_or_url ...
 <h2>3. A screen shot of what it looks like to write code in your preferred Python IDE (hint: need to see syntax highlighting)</h2>
 <img src="ide.png">
 
+<h2>4. A screenshot of output of your okok.py test (defined below)</h2>
+<img src="splitscreens.png">
+
+

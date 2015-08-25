@@ -23,3 +23,7 @@ def _ok4():
   assert unittest.tries==4
   assert unittest.fails==1
   print unittest.score() 
+  
+@ok
+def _ok5():
+  assert 'a'=='b'
