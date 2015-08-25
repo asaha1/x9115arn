@@ -1,4 +1,4 @@
-HW 1
+<h1>HW 1</h1>
 
 <h2>1. A screen snap of the top level of your repo</h2>
 <img src="top level repo.png">
@@ -9,8 +9,8 @@ HW 1
 <h3>Output:</h3> 
 Python 2.7.6
  
-Command: pip help
-Output: 
+<h3>Command:</h3> pip help
+<h3>Output:</h3> 
 asaha1@x9115arn:~/workspace (master) $ pip help
 
 Usage:   
@@ -41,8 +41,8 @@ General Options:
   --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup.
   --cert <path>               Path to alternate CA bundle.
   
-  Command: easy_install -h
-  Output:
+  <h3>Command:</h3> easy_install -h
+  <h3>Output:</h3> 
   Global options:
   --verbose (-v)  run verbosely (default)
   --quiet (-q)    run quietly (turns verbosity off)
@@ -98,6 +98,6 @@ Options for 'easy_install' command:
 usage: easy_install [options] requirement_or_url ...
    or: easy_install --help
    
-3. A screen shot of what it looks like to write code in your preferred Python IDE (hint: need to see syntax highlighting).
+<h2>3. A screen shot of what it looks like to write code in your preferred Python IDE (hint: need to see syntax highlighting)</h2>
 <img src="ide.png">
 
