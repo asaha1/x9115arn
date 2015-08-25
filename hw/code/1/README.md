@@ -43,7 +43,7 @@ General Options:
   <h3>Command:</h3> easy_install -h 
   <h3>Output:</h3>  
    
-  <code>Global options: 
+  Global options: 
   --verbose (-v)  run verbosely (default) 
   --quiet (-q)    run quietly (turns verbosity off) 
   --dry-run (-n)  don't actually do anything 
@@ -96,7 +96,7 @@ Options for 'easy_install' command:
                                              7/site-packages' 
 
 usage: easy_install [options] requirement_or_url ...
-   or: easy_install --help</code>
+   or: easy_install --help
    
 <h2>3. A screen shot of what it looks like to write code in your preferred Python IDE (hint: need to see syntax highlighting)</h2>
 <img src="ide.png">
