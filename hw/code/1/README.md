@@ -1,16 +1,16 @@
 HW 1
 
-1. A screen snap of the top level of your repo
+<h2>1. A screen snap of the top level of your repo</h2>
 <img src="top level repo.png">
+ 
+<h2>2. Output of the commands python --version, pip help, easy_install -h</h2>
 
-2. Output of the commands python --version, pip help, easy_install -h
-
-Command: python --version
-Output: 
+<h3>Command:</h3> python --version 
+<h3>Output:</h3> 
 Python 2.7.6
-
+ 
 Command: pip help
-Output:
+Output: 
 asaha1@x9115arn:~/workspace (master) $ pip help
 
 Usage:   
