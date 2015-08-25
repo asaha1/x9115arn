@@ -7,12 +7,10 @@
 
 <h3>Command:</h3> python --version 
 <h3>Output:</h3> 
-asaha1@x9115arn:~/workspace (master) $ python --version 
 Python 2.7.6
  
 <h3>Command:</h3> pip help
 <h3>Output:</h3> 
-asaha1@x9115arn:~/workspace (master) $ pip help
 
 Usage:   
   pip <command> [options] 
@@ -44,7 +42,6 @@ General Options:
    
   <h3>Command:</h3> easy_install -h 
   <h3>Output:</h3>  
-  asaha1@x9115arn:~/workspace (master) $ easy_install -h 
    
   Global options: 
   --verbose (-v)  run verbosely (default) 
