@@ -14,14 +14,14 @@
 <h4>iii4. Future Works:</h4> The system is currently semi-automated but the aim should be to produce a fully-automated product. Though major parts of the algorithm works independently, deciding input types and username/password needs to provided by the user. We also find that the algorithm doesn’t show usual characteristics in the case of Timeclock application. The author states that the behavior is due to the high precision in float constants which are mined from the application. The algorithm can be improved to handle all data types. 
 
 <h3>iv. Suggested Improvements:</h3>
-<b>iv1.</b> As the algorithm cannot generate the input types by itself this procedure is yet to become fully autonomous. Learning algorithms can be used to automate this part. 
-<b>iv2.</b> Also we find that the algorithms struggles with handling float constants which led to increased effort in the subsequent algorithms. Better techniques to handle float constants and similar data types can be generated.
-<b>iv3.</b> In the cases where improvements were not shown with the subsequent algorithms, the authors provided with an intuitive explanation without any proofs. Similar algorithms can be tested to confirm if they show the same characteristics. Only then one can conclude the correct reason of the strange behavior.
+<b>iv1.</b> As the algorithm cannot generate the input types by itself this procedure is yet to become fully autonomous. Learning algorithms can be used to automate this part. <br>
+<b>iv2.</b> Also we find that the algorithms struggles with handling float constants which led to increased effort in the subsequent algorithms. Better techniques to handle float constants and similar data types can be generated. <br>
+<b>iv3.</b> In the cases where improvements were not shown with the subsequent algorithms, the authors provided with an intuitive explanation without any proofs. Similar algorithms can be tested to confirm if they show the same characteristics. Only then one can conclude the correct reason of the strange behavior. <br>
 
 
 <h3> References:</h3> 
 <ol>
-    [<li>]Nadia Alshahwan and Mark Harman. 2011. Automated Web Application Testing Using Search Based Software Engineering. In Proceedings of the 26th IEEE/ACM International Conference on Automated Software Engineering</li>
+    <li>Nadia Alshahwan and Mark Harman. 2011. Automated Web Application Testing Using Search Based Software Engineering. In Proceedings of the 26th IEEE/ACM International Conference on Automated Software Engineering</li>
     <li>McMinn, P., "Search-Based Software Testing: Past, Present and Future," in Software Testing, Verification and Validation Workshops (ICSTW), 2011 IEEE Fourth International Conference on , vol., no., pp.153-163, 21-25 March 2011 doi: 10.1109/ICSTW.2011.100</li>
     <li>B. Korel. Automated software test data generation. IEEE Transactions on Software Engineering, 16(8):870–879, 1990.</li>
     <li>C. C. Michael, G. McGraw, and M. A. Schatz. Generating software test data by evolution. IEEE Transactions on Software Engineering, 27:1085–1110, 2001.</li>
