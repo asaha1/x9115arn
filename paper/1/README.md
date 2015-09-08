@@ -11,7 +11,7 @@
 <h4>iii1. Motivational statements:</h4> Successful web applications get modified each day to adopt the needs of its users but due to time and labor constraints they are often not tested properly. Now due to inadequate testing, applications face a lot of risk such as increased down time and potential loss of customers and money. Therefore a lot of research is being made to automate the testing phase by using Search based testing to make testing less reliant on slow laborous process [1].
 <h4>iii2. Related Work:</h4> The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [3]. The branch ordering technique is inspired from Michael et al. [4]. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci [5]. Other than that Artzi et al. [6] generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al. [7].
 <h4>iii3. Informative visualizations:</h4>
-<img src = "visual 1 main table.png">
+<img src = "visual 1 main table.png"> <br>
 The total evaluation is summed up in one table. The authors implemented three versions of the tool:
 <ol>
     <li>Near Miss Seeding (NMS)</li>
