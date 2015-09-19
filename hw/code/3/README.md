@@ -1,6 +1,6 @@
 <h2>10.15 Exercise 8 (the Birthday Paradox):</h2>
 <img src="photos/birthdayParadox.png">
-<h2>Employeee class:</h2>
+<h2>Employee class:</h2>
 <img src="photos/employee.png">
 <h2>Poker</h2>
 <img src="photos/poker.png">
