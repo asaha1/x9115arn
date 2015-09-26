@@ -35,53 +35,57 @@ class SimulatedAnnealing(object):
         print "Min energy = " + str(self.minEnergy)
         print "Max energy = " + str(self.maxEnergy)
         
-    MAX_ENERGY = 19609524724
-    MIN_ENERGY = 7202
+    MAX_ENERGY = 19609524724.0
+    MIN_ENERGY = 7202.0
     
     def neighbor(self, state):
         return random.randrange(-1000, 1000) + state
         
     def getEnergy(self, state):
-        f1 = self.schafferF1(state)
-        f2 = self.schafferF2(state)
-        return float(f1 + f2 - self.MIN_ENERGY) / (self.MAX_ENERGY - self.MIN_ENERGY)
+        return (self.getCumulatedEnergy(state) - self.MIN_ENERGY) / (self.MAX_ENERGY - self.MIN_ENERGY)
         
-    def p(self, oldEnergy, newEnergy, temp):
-        return math.exp((float(oldEnergy - newEnergy)) / temp)
+    def probability(self, oldEnergy, newEnergy, temp):
+        prob = math.exp((oldEnergy - newEnergy) / temp)
+        #say(prob)
+        return prob
     
     def simulatedAnnealing(self):
-        state = 0
-        energy = self.getCumulatedEnergy(state)
+        state = self.MAX_X
+        energy = self.getEnergy(state)
         stateBest = state
         energyBest = energy
-        k = 0
-        kMax = 5
+        k = 1.0
+        kMax = 1000
         while k < kMax:
-            print "sb = ", stateBest
-            print "eb = ", energyBest
+            if k % 25 == 0: 
+                say("\n") 
+                say('%04d'%k)
+                say(',')
+                say(stateBest)
             stateNeighbor = self.neighbor(state)
-            print "sn =", stateNeighbor
             energyNeighbor = self.getEnergy(stateNeighbor)
-            print "en = ", energyNeighbor
             
             if energyNeighbor < energyBest:
                 stateBest = stateNeighbor
                 energyBest = energyNeighbor
                 say("!")
+                
             if energyNeighbor < energy:
                 state = stateNeighbor
                 energy = energyNeighbor
                 say("+")
-            elif self.p(energy, energyNeighbor, (1 - float(k) / kMax)) < random.random():
+            elif self.probability(energy, energyNeighbor, k / kMax) - 0.1 < random.random():
+                state = stateNeighbor
                 energy = energyNeighbor
                 say("?")
                 
             say(".")
             k += 1
-            if k % 50 == 0: print "\n", stateBest
+            
             
         return stateBest
 
 if __name__ == '__main__':
     sa = SimulatedAnnealing()
     sa.simulatedAnnealing()
+    print ""
