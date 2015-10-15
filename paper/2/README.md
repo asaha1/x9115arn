@@ -10,11 +10,11 @@ Ruilian Zhao, Micheal R. Lyu, Yinghu Min, 2009. Automatic string test data gener
 <b>iii2. Related Work:</b> The earlier studies which have used ON-OFF test generation has focused only on numeric types and ignored string data. The studies which addressed string test generation used string mutation operators like insertion, deletion and substitution. This study specifically addressed the problem of ON-OFF test data generation on string predicates.</br>
 <b>iii3. Informative Visualizations:</b></br>
 <img src = "pic1.png"> </br>
-a. Compare different initial characters for predicates with literal. b. compare different initial characters for predicates with literal
+Compare different initial characters for predicates with literal.</br>
 <img src = "pic2.png"> </br>
-Compare different initial characters for predicates with fixed length
+Compare different initial characters for predicates with fixed length</br>
 <img src = "pic3.png"> </br>
-Compare different initial characters for predicates with varied length
+Compare different initial characters for predicates with varied length</br>
 <b>iii4. Future Works:</b> The system is currently semi-automated but the aim should be to produce a fully-automated product. If the test string in the predicate is a literal that contains one character then for predicate Max-pre1, the conclusions get invalid. These are the areas where development can be done.</br>
 <h1>iv.	Suggested Improvements: </h1>
 <b>iv1.</b> The performance of the system can be enhanced to incorporate initial inputs not shorter than the target string and with characters generated randomly.</br>
