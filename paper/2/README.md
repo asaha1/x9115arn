@@ -20,3 +20,5 @@ Compare different initial characters for predicates with varied length</br>
 <b>iv1.</b> The performance of the system can be enhanced to incorporate initial inputs not shorter than the target string and with characters generated randomly.</br>
 <b>iv2.</b> For password predicate, the initial input should not be shorter than the target string in the predicate under test. The author states that this trend is found in predicates Max-pre2, random, etc. but doesn’t take this step into account.</br>
 <b>iv3.</b> ON-OFF test generation is a heuristic process and therefore the instrumented program has to be executed again in order to evaluate its objective function. The cost of the objective function can be reduced by using algorithms like dynamic programming. This will drastically reduce the running time of the evaluation function.
+<h1>v. Connection to paper one: </h1>
+The first paper was on automated web application testing using search based software engineering. This paper was based on automatic string test generation for domain testing.
