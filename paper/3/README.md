@@ -18,5 +18,5 @@ The tool used in the test obtains a detailed report of the bug or errors which i
 <b>iv1.</b> One of the very important attributes of javascript is callback, however callback is not widely used in PHP than in javascript. For this reason in the sample program mentioned callback does not affect much, However in the cases where callback function has more effect How well this test acts has to be seen.</br>
 <b>iv2.</b> Apollo considers only POST GET and REQUEST as sources for the input parameters.</br>
 <b>iv3.</b> In some web applications the Apollo strategy is 8 times better than the randomized strategy where as in some cases it is almost the same. Such difference in performance has to be noted.</br>
-<h1>Connection to the other papers: </h1>
+<h1>v. Connection to the other papers: </h1>
 The first paper was on automated web application testing using search based software engineering. The second paper was on automated domain testing on string predicates. This paper is based on finding bugs by dynamic test generation technique for the domain of dynamic web applications. A tool called Apollo is used to find two kinds of failures - execution failures and HTML failures.
