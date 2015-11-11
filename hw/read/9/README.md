@@ -13,8 +13,11 @@ Serdar Doğan, Aysu Betin-Can, Vahid Garousi, Web application testing: A systema
 <img src = "1. secondary studies.png"> </br>
 <b>iii3. Informative visualizations:</b> </br>
 <img src = "2. rq1.png"> </br>
+<b>RQ1</b> </br></br>
 <img src = "3. rq2.png"> </br>
+<b>RQ2</b> </br></br>
 <img src = "4. rq3.png"> </br>
+<b>RQ3</b> </br></br>
 <b>iii4. Patterns and anti-patterns: </b>The authors included 95 of the initial 193 papers in this study. They synthesized the following data/findings from the papers: (1) the types of input/inferred test models, (2) the fault models/bug taxonomy related to web applications, (3) test tools proposed in this area and their capabilities, (4) metrics used for assessing cost and effectiveness of WAT techniques, (5) the threats to validity in the empirical studies, (6) level of rigor and industrial relevance of the empirical studies, and (7) evidence regarding the scalability of the WAT techniques. In answering RQ 1.2, they have extracted the types of fault models/bug taxonomies specific to web applications. They also found that over 50 types of faults have been discussed. Test techniques targeting some of these fault types have been proposed. It is worth conducting more in-depth studies in future to ensure coverage of all the fault types by the test techniques and also the effectiveness of those techniques on detecting each specific fault type.</br>
 
 <h1>iv.	Suggested Improvements:</h1> 
