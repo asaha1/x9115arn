@@ -1,12 +1,12 @@
-<h1>HW5</h1>
-<img src="1.png">
-<img src="2.png">
-<img src="3.png">
-<img src="4.png">
-<img src="5.png">
-<img src="6.png">
-<img src="7.png">
-<img src="8.png">
-<img src="9.png">
-<img src="10.png">
-<img src="11.png">
+<h1>HW6</h1>
+<img src="Images/1.png">
+<img src="Images/2.png">
+<img src="Images/3.png">
+<img src="Images/4.png">
+<img src="Images/5.png">
+<img src="Images/6.png">
+<img src="Images/7.png">
+<img src="Images/8.png">
+<img src="Images/9.png">
+<img src="Images/10.png">
+<img src="Images/11.png">
