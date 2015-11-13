@@ -1,4 +1,5 @@
 <h1>HW6</h1>
+<img src="Images/code.png">
 <img src="Images/1.png">
 <img src="Images/2.png">
 <img src="Images/3.png">
