@@ -1,5 +1,3 @@
-import Model
-import math
 import random
 import copy
 import numpy
