@@ -12,5 +12,7 @@ if __name__ == '__main__':
         optimize.append([optimizer.__name__] + optimizer(model))
         print ""
         i += 1
+    print optimize
+    print ""
     print(rdivDemo(optimize))
     

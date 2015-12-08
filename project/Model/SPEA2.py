@@ -7,7 +7,7 @@ import numpy
 
 def SPEA2(model):
     print "Model: ", model.__name__
-    GEN = 25
+    GEN = 50
     MU = 100
     creator.create("FitnessMin", base.Fitness, weights=(-1.0, -1.0))
     creator.create("Individual", array.array, typecode='d', fitness=creator.FitnessMin)
@@ -91,6 +91,9 @@ def SPEA2(model):
     for ind in final_set:
         if sum(model.getObjs(ind)) < sum(model.getObjs(min)):
             min = ind
-            min_val.append(ind.fitness.values[0] + ind.fitness.values[1])
-    print min
+        min_val.append(ind.fitness.values[0] + ind.fitness.values[1])
+    print "Best solution = "
+    for i in min:
+        print i
+
     return min_val

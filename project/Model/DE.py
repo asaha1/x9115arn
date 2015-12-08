@@ -8,7 +8,7 @@ def DE(model):
 
     F = 0.75    # crossover factor
     CR = 0.3    # crossover probability
-    maxtries = 25
+    maxtries = 50
     NumCandidates = 100
     best = model()
     candidates = [best]
@@ -60,23 +60,20 @@ def DE(model):
     min_val=[]
     for tries in range(maxtries):
         printList = []
-        print "Try %02d" % (tries + 1),
+        print "Gen %02d" % (tries + 1),
         print "|",
         newcandidates = []
         for new, best in mutate(candidates, F, CR, best):
             newcandidates.append(new)
         candidates = newcandidates
-        print "!=%02d" % printList.count("!"), "+=%02d" % printList.count("+"), ".=%02d" % printList.count("."),
-        print "|",
         print "".join(printList),
         min_val.append(sum(best.getObjs(best.val)))
 
         print("")
-    print "---------------------"
-    print "Best solutions: "
-    print "---------------------"
+    print "Best solutions= "
     for value in best.val:
         print value
+
     return min_val
 
 

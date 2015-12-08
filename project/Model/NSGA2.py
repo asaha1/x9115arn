@@ -38,7 +38,7 @@ def NSGA2(model):
     min_val = []
     # random.seed(seed)
 
-    NGEN = 25
+    NGEN = 50
     MU = 100
     CXPB = 0.9
 
@@ -100,5 +100,8 @@ def NSGA2(model):
     for i in pop:
         if sum(model.getObjs(i)) < sum(model.getObjs(best)):
             best = i
-    print "Best solution = ", best
+    print "Best solution = "
+    for i in best:
+        print i
+
     return min_val
