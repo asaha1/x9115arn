@@ -7,7 +7,7 @@ import numpy
 
 def SPEA2(model):
     print "Model: ", model.__name__
-    GEN = 50
+    GEN = 25
     MU = 100
     creator.create("FitnessMin", base.Fitness, weights=(-1.0, -1.0))
     creator.create("Individual", array.array, typecode='d', fitness=creator.FitnessMin)

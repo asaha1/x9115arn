@@ -8,19 +8,16 @@ def DE(model):
 
     F = 0.75    # crossover factor
     CR = 0.3    # crossover probability
-    maxtries = 50
-    NumCandidates = 100
+    maxtries = 25
+    NumCandidates = 160
     best = model()
     candidates = [best]
-    print "First Candidate Value:", candidates[0].val
 
     for i in range(1, NumCandidates):
         candidate = model()
         candidates.append(candidate)
         if candidate.eval() < best.eval():
             best = copy.deepcopy(candidate)
-    print "Number Of Candidates:", len(candidates)
-    print "Best Before TRIES in List of candidates:", best.val
 
     def mutate(candidates, F, CR, best):
         for i in range(len(candidates)):

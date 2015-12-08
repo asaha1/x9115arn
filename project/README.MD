@@ -29,60 +29,47 @@ o	New = X + f * (Y - Z)
 NSGA2 was invented by Srinivas and Deb [5]. The objective of the NSGA algorithm is to improve the adaptive fit of a population of candidate solutions to a Pareto front constrained by a set of objective functions. The algorithm uses an evolutionary process with surrogates for evolutionary operators including selection, genetic crossover, and genetic mutation. The population is sorted into a hierarchy of sub-populations based on the ordering of Pareto dominance. Similarity between members of each sub-group is evaluated on the Pareto front, and the resulting groups and similarity measures are used to promote a diverse front of non-dominated solutions. 
 SPEA2 was invented by E.Zitler et al [6]. The objective of the algorithm is to locate and and maintain a front of non-dominated solutions, ideally a set of Pareto optimal solutions. This is achieved by using an evolutionary process (with surrogate procedures for genetic recombination and mutation) to explore the search space, and a selection process that uses a combination of the degree to which a candidate solution is dominated (strength) and an estimation of density of the Pareto front as an assigned fitness. An archive of the non-dominated set is maintained separate from the population of candidate solutions used in the evolutionary process, providing a form of elitism.
 
-```
-Gen 01 | +..++??++.+?.++..+++++++....+++....+?++.....?+.+++++.+..++.+..+++....+++...+.++..++.+++..+.+..+....+ 
-Gen 02 | .+..+++.+.?++.++.+.....+.+..+?.++.?+?..++.+..+.+.?.+...++....++.++++.++..++..+.++...++?.....?+..++.+ 
-Gen 03 | ?.+.....?+++...+...+.....+?.+.+.+.+.+..++.......++.+.............+++.+.....+.+...+..++.....?+?.++.++ 
-Gen 04 | +.?..++.+++++...+.+.......+.+++.++.+..+?+++...!...+..+...+..+......++++....+...+...?.....+.+++.....+ 
-Gen 05 | +..?+++.+?.+++...+..+..?..?+.+++.+.!..?.?...+..+..++..++.+..+?.....+.+++.++.?..+..+++....+.+..+.+.++ 
-Gen 06 | .?+..+.+.+.....+++.+.........+++.+..++.?+..+....++.+++.....+...++..+?++...+.++........++...+..+?..+? 
-Gen 07 | .+?....++.+..+..+.....+.+.+?.+?..?+..?+?....++?.+......++...+++.+.?......+..??...++...++.+...?.....+ 
-Gen 08 | ..+....+++.+....++...+.+..+.+.+++.....+.+.+++++?......?..+...+....+.++.+.+.......+....+.......+++.+. 
-Gen 09 | .+..+..+...........+...++.++......+...++?..++.........+++..?.....+....++.....?.....+..+........+.... 
-Gen 10 | .?..?+.........+?.+...........??.+....+....+..+.+..+................+++......+++++.+..+++.+.+++.+... 
-Gen 11 | +.+++++.+...++.......?..++.+..++.+..+++.+...?+......+++...+...++..?...+...+..+...........++.....++.? 
-Gen 12 | +.+.+....+.....+....?+.?..++.++.?+...++...??+...+.+...?.+.+.+....+....+.....++..........?....??..++. 
-Gen 13 | +..+..++..........+...++..+...+.....+......+...?+.......+..++?+....+.++.....++..+++.....+......+.... 
-Gen 14 | .......+?.......++.+++.++..+.+..+.+!..+++...?....+..+..+.....++.....+....?.+.....+++.+.........++.?+ 
-Gen 15 | ++.+...+++.........+.++.++.+.+.+.+..+....+++...+.+.........+?.....+.+....+.+...+++....++.++.+....?.. 
-Gen 16 | ..?+..+..+.+?+...++.....+?....+..?.!..+.+.++.+...+....+.+...........+.+.+.+?..++...++.............+. 
-Gen 17 | .?..+.+++?.........+.+...+......+?....++++..........+......?++....+.+...+....+......+.+?+++...+....+ 
-Gen 18 | ..++.?+.+.+.++.+.+?.......+.?.+..+......+.+.+?..+?............+.....+?+.+..+.+....+..+..+.!+.....?.. 
-Gen 19 | ........++..+..+.+.++++......+...?..++.......?....?+.....?..+.++..+.?.?...+...?..+.+..?...?..++....+ 
-Gen 20 | +....+..++..+++.+.+..++.....++.++....+..+....+?++....?..+..+++.+.+?.+.++...+.+.........+.+..+......+ 
-Gen 21 | ...+.+...+.+.++++..?+....+.+....+?+........+...?.+++.....+..+...?......+..+..+.+...++..+..?.......+. 
-Gen 22 | .+?.++............+...+.................+++..++..+..+..+.+............++.++.+++++.+++++.+.?+..++.... 
-Gen 23 | ?..+.........++.++.....++.+.......+........?...?...........+.........+.....+?++..+.++..?+....+?..+.. 
-Gen 24 | .+?..+?..+....++..+...+...+.++..++.++....+++......?.?..+.?...+....+.+......+..++.....?+.++...+.....+ 
-Gen 25 | ++................+.+++..+..+.+...?..+....+..+..............?...+..........++...+..+....+....++....+ 
-Gen 26 | .......+.+.+...++...+...+..+........+....?+........+.+.....+++...++..+.+....?+...++......+!?........ 
-Gen 27 | ......+....??..++.+....+.?...+.+.....+...+...+....+.+.?...+...+.++?........++.+.++...+......++?...?+ 
-Gen 28 | ..+.++.+.+.....+......++...++.+...+.....++....+.+....+.++......+..++...+.?.++.....?+..+..+.+..?.+... 
-Gen 29 | +?...+.+.....++.++...+.+........?.....++++..........+....+.....++........++........++.+.....+..+?.+. 
-Gen 30 | ...?......?+.........++.+.++.++.......+..+..+.....+.....?++.+...+....+.++++.+...++.+...+.....?+.++++ 
-Gen 31 | .....++.......++.....++....+..++.+..+...++?....+++.+......+...?.++.?.++.?.+...+....?....+...+......+ 
-Gen 32 | ..+...++.+?+....++.....?.......+...+....+......+......?.+...+?+...++..++.?.........?.?+?....?.?+++.. 
-Gen 33 | +++++.+....++.++?...?.....+............+....+...+......+.+..+...?.+.+....++?....+....+.?....+..??+.. 
-Gen 34 | ..+...+.+......+...+++....+.+.........?+++...............+.?...++.+.+..+.?.....+.+.+..++!...+.+...+. 
-Gen 35 | ....+....+......+...?....?....?.....+..+....+....+.+........+..........++?.....+...?+.?....+.?..?... 
-Gen 36 | ++..?.......?.+?+..?+..?.?.....??...+.....+.+..+...+?.......+......?....++.....?...++.++.+....?..++. 
-Gen 37 | .+..+.?.+...+..+...+...+?.............+.+.+?+......+?.?+.....?+...+...++......+....?+.......+.?+?.+. 
-Gen 38 | .+.............+.+..+...+??.+.+...........+.......+.+.?.....?+.....?+.......++++..?.+.++.+?...+.+.?+ 
-Gen 39 | .+..+?++..+.....+++.?.....+.?..+.....?+...+.?+++.++.......+..?++......+.....+++.........?..+.+...... 
-Gen 40 | +.........+++.+.++.....+.....++...+..+.++..?.?..+...+..++.?+..+......+++?......+..+....+....+??.?.+. 
-Gen 41 | .+.........+..+.+.+...++..+?+....+.??......?+.......+++.++.??....++.+++...........+........+..+..... 
-Gen 42 | ...+...+++?.....+......?.+......?...+...............++.+..+??.+...+...+.?....++.?.......!+.+....+..+ 
-Gen 43 | ...+......?..+.++.........++?....+..+.?+......+......++.+....+....++.............+.+...?.....+.++..+ 
-Gen 44 | +.......+.......++.+...?......+..+.....+.........+++?.........+....++...+...........++......+......+ 
-Gen 45 | +......?++...+..+..++..+.+..??.?.....?.+++...+.......+......++..?.+.........?..++....+...++..++....+ 
-Gen 46 | ..?...........?..+...++.++....+....................+............??.+...+.++.?+...?+....+.+....+..... 
-Gen 47 | +...++..?....++.+.......+..++...+........+......++...+.....+++...+.....+...??........+...+.++...??.. 
-Gen 48 | .......+..+.+.?+.......+..++......+......++..!..++.+..+...+..?+.......!.......+.++...++.+.........?+ 
-Gen 49 | +.+............?++.+.+...+.+..++++.+.?........+.....+....??.....?.....?...........+...++.....+....?. 
-Gen 50 | ...++....?+...+.+..++..+....?+......?+?+?..+...+?+...+......?++.+..++.!............?.....+++..+..... 
-```
+Implementation:
+The Integrated Project Model Quality Assurance Chain was implemented using the concepts of Domain Specific Language. The model has been implemented using the concepts of stock, flow and auxiliary variables. 
+Stock: A Stock variable is measured at one specific time, and represents a quantity existing at that point in time, which may have accumulated in the past [from lecture notes]. Formally a stock is some entity that is accumulated over time by inflows and/or depleted by outflows. Stocks can only be changed via flows. Mathematically a stock can be seen as an accumulation or integration of flows over time - with outflows subtracting from the stock. Stocks typically have a certain value at each moment of time - e.g. the number of population at a certain moment.
+Flow: A flow variable is measured over an interval of time. Therefore a flow would be measured per unit of time. Flow is roughly analogous to rate or speed in this sense. Usually we can clearly distinguish inflows (adding to the stock) and outflows (subtracting from the stock). Flows typically are measured over a certain interval of time - e.g., the number of births over a day or month.
+Auxiliary: An auxiliary variable is used to store intermediate values that can be calculated based on stocks/flows at the current time. 
+<img src="\images\ipm_QA.png">
+As mentioned above, the Quality Assurance chain of the Integrated Project Model was evaluated. Some of the stocks, flows, and auxiliaries in the model are listed below.
+| Stocks   |   Flows   |Auxiliaries| 
+|-----|-----|-----|
+|Tasks_worked, Potentially_detectable_errors, Detected_errors, Reworked_errors_during_devel, Escaped_errors, Cumulative_errors    | SD_rate, QA_rate, Error_generation_rate, Error_escape_rate, Error_detection_rate, rework_rate, Count_detected_errors, generation_rate  | Software_development_rate, Average_qa_delay, Potentially_detectable_errors, DSI_per_task, Multiplier_for_losses, Percent_of_job_actually_worked, Daily_MP_for_QA, Percent_of_job_actually_worked, DSI_per_task, Schedule_pressure, Ratio_of_pros_to_rookies, Software_development_rate, QA_rate, Average#errors_per_task, Daily_mp_for_rework, Multiplier_for_losses, Error_generation_rate, QA_rate, Error_density, Multiplier_due_to_error_density  |
 
 
+```
+rank ,         name ,    med   ,  iqr 
+----------------------------------------------------
+   1 ,        NSGA2 ,    0.00  ,  0.00 (*              |              ), 0.00,  0.00,  0.00
+   2 ,        SPEA2 ,    0.06  ,  0.06 (     -*        |              ), 0.05,  0.06,  0.11
+   2 ,           DE ,    0.07  ,  0.15 (  -----*       |              ), 0.02,  0.07,  0.17
+```
+
+```
+rank ,         name ,    med   ,  iqr 
+----------------------------------------------------
+   1 ,        NSGA2 ,    0.00  ,  0.00 (*              |              ), 0.00,  0.00,  0.00
+   1 ,        SPEA2 ,    0.00  ,  0.00 (*              |              ), 0.00,  0.00,  0.00
+   2 ,           DE ,    0.02  ,  0.04 ( ----*         |              ), 0.01,  0.02,  0.04
+```
+
+```
+if __name__ == '__main__':
+    optimize = []
+    i = 0
+    for optimizer in [de, nsga2, spea2]:
+        print "Optimizer: %s, " % optimizer.__name__, "Model: %s\n" % model.__name__
+        optimize.append([optimizer.__name__] + optimizer(model))
+        print ""
+        i += 1
+    print optimize
+    print ""
+    print(rdivDemo(optimize))
+```
 
 
 

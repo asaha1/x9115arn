@@ -38,7 +38,7 @@ def NSGA2(model):
     min_val = []
     # random.seed(seed)
 
-    NGEN = 50
+    NGEN = 25
     MU = 100
     CXPB = 0.9
 
