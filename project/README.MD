@@ -29,7 +29,7 @@ o	New = X + f * (Y - Z)
 NSGA2 was invented by Srinivas and Deb [5]. The objective of the NSGA algorithm is to improve the adaptive fit of a population of candidate solutions to a Pareto front constrained by a set of objective functions. The algorithm uses an evolutionary process with surrogates for evolutionary operators including selection, genetic crossover, and genetic mutation. The population is sorted into a hierarchy of sub-populations based on the ordering of Pareto dominance. Similarity between members of each sub-group is evaluated on the Pareto front, and the resulting groups and similarity measures are used to promote a diverse front of non-dominated solutions. 
 SPEA2 was invented by E.Zitler et al [6]. The objective of the algorithm is to locate and and maintain a front of non-dominated solutions, ideally a set of Pareto optimal solutions. This is achieved by using an evolutionary process (with surrogate procedures for genetic recombination and mutation) to explore the search space, and a selection process that uses a combination of the degree to which a candidate solution is dominated (strength) and an estimation of density of the Pareto front as an assigned fitness. An archive of the non-dominated set is maintained separate from the population of candidate solutions used in the evolutionary process, providing a form of elitism.
 
-<code>
+```
 Gen 01 | +..++??++.+?.++..+++++++....+++....+?++.....?+.+++++.+..++.+..+++....+++...+.++..++.+++..+.+..+....+ 
 Gen 02 | .+..+++.+.?++.++.+.....+.+..+?.++.?+?..++.+..+.+.?.+...++....++.++++.++..++..+.++...++?.....?+..++.+ 
 Gen 03 | ?.+.....?+++...+...+.....+?.+.+.+.+.+..++.......++.+.............+++.+.....+.+...+..++.....?+?.++.++ 
@@ -80,7 +80,7 @@ Gen 47 | +...++..?....++.+.......+..++...+........+......++...+.....+++...+.....
 Gen 48 | .......+..+.+.?+.......+..++......+......++..!..++.+..+...+..?+.......!.......+.++...++.+.........?+ 
 Gen 49 | +.+............?++.+.+...+.+..++++.+.?........+.....+....??.....?.....?...........+...++.....+....?. 
 Gen 50 | ...++....?+...+.+..++..+....?+......?+?+?..+...+?+...+......?++.+..++.!............?.....+++..+..... 
-</code>
+```
 
 
 
