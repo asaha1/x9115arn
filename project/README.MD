@@ -36,6 +36,12 @@ Flow: A flow variable is measured over an interval of time. Therefore a flow wou
 Auxiliary: An auxiliary variable is used to store intermediate values that can be calculated based on stocks/flows at the current time. 
 <img src="\images\ipm_QA.png">
 As mentioned above, the Quality Assurance chain of the Integrated Project Model was evaluated. Some of the stocks, flows, and auxiliaries in the model are listed below.
+
+|Auxiliaries   | Flows   | Stocks   | 
+|-----|-----|-----|
+|MultiplierSchedulePressure, MultiplierWorkforce, NominalError, SoftwareDevelopmentRate, PotentialErrorDetectRate, QARate, AverageErrorPerTask, ActualReworkMP, DailyMPRework, TimeToSmooth, MultiplierToRegeneration, ActiveErrorDensity, TestingRate, PassiveErrorDensity, FractionEscapingErrors, ActiveErrorsRetiringFraction, BadFixGenerationRate    |  ErrorGenerationRate, ErrorDetectionRate, ErrorEscapeRate, ReworkRate, ActiveErrorRegenerationRate, ActiveErrorDetectAndCorrectRate, ActiveErrorRetirementRate, PassiveErrorDetectAndCorrectRate, PassiveErrorGenerationRate, ActiveErrorGenerationRate |   PotentiallyDetectableError, DetectedError, EscapedError, ReworkedError, UndetectedActiveErrors, UndetectedPassiveErrors|
+
+
 | Stocks   |   Flows   |Auxiliaries| 
 |-----|-----|-----|
 |Tasks_worked, Potentially_detectable_errors, Detected_errors, Reworked_errors_during_devel, Escaped_errors, Cumulative_errors    | SD_rate, QA_rate, Error_generation_rate, Error_escape_rate, Error_detection_rate, rework_rate, Count_detected_errors, generation_rate  | Software_development_rate, Average_qa_delay, Potentially_detectable_errors, DSI_per_task, Multiplier_for_losses, Percent_of_job_actually_worked, Daily_MP_for_QA, Percent_of_job_actually_worked, DSI_per_task, Schedule_pressure, Ratio_of_pros_to_rookies, Software_development_rate, QA_rate, Average#errors_per_task, Daily_mp_for_rework, Multiplier_for_losses, Error_generation_rate, QA_rate, Error_density, Multiplier_due_to_error_density  |
