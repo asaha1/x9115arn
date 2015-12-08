@@ -26,13 +26,15 @@ In this paper we are typically interested in the functional quality which deals 
 
 <img src="\images\ipm_full.png">
 
+**Integrated Project Model: image screen captured from ISEE player**
 
-Integrated Project Model: image screen captured from ISEE player
 
 ##Background
 
 
 Evolutionary algorithms or EAs are computer programs that attempt to solve complex problems by mimicking the processes of Darwinian evolution. In an EA a number of artificial creatures search over the space of the problem [3]. They compete continually with each other to discover optimal areas of the search space. It is hoped that over time the most successful of these creatures will evolve to discover the optimal solution. Therefore these algorithms can be used to approximate solutions and optimize different types of problems. 
+
+
 The optimizers used in this project are Differential Evolution (DE), Non Sorting Genetic Algorithm II (NSGA2) and Strength Pareto Evolutionary Algorithm II (SPEA2). These algorithms are based on Darwinian principles and uses iterative progress, such as growth or development in a population. 
 
 
@@ -53,14 +55,14 @@ SPEA2 was invented by E.Zitler et al [6]. The objective of the algorithm is to l
 
 
 The Integrated Project Model Quality Assurance Chain was implemented using the concepts of Domain Specific Language. The model has been implemented using the concepts of stock, flow and auxiliary variables. 
-* Stock: A Stock variable is measured at one specific time, and represents a quantity existing at that point in time, which may have accumulated in the past [from lecture notes]. Formally a stock is some entity that is accumulated over time by inflows and/or depleted by outflows. Stocks can only be changed via flows. Mathematically a stock can be seen as an accumulation or integration of flows over time - with outflows subtracting from the stock. Stocks typically have a certain value at each moment of time - e.g. the number of population at a certain moment.
-* Flow: A flow variable is measured over an interval of time. Therefore a flow would be measured per unit of time. Flow is roughly analogous to rate or speed in this sense. Usually we can clearly distinguish inflows (adding to the stock) and outflows (subtracting from the stock). Flows typically are measured over a certain interval of time - e.g., the number of births over a day or month.
-* Auxiliary: An auxiliary variable is used to store intermediate values that can be calculated based on stocks/flows at the current time. 
+* **Stock:** A Stock variable is measured at one specific time, and represents a quantity existing at that point in time, which may have accumulated in the past [from lecture notes]. Formally a stock is some entity that is accumulated over time by inflows and/or depleted by outflows. Stocks can only be changed via flows. Mathematically a stock can be seen as an accumulation or integration of flows over time - with outflows subtracting from the stock. Stocks typically have a certain value at each moment of time - e.g. the number of population at a certain moment.
+* **Flow:** A flow variable is measured over an interval of time. Therefore a flow would be measured per unit of time. Flow is roughly analogous to rate or speed in this sense. Usually we can clearly distinguish inflows (adding to the stock) and outflows (subtracting from the stock). Flows typically are measured over a certain interval of time - e.g., the number of births over a day or month.
+* **Auxiliary:** An auxiliary variable is used to store intermediate values that can be calculated based on stocks/flows at the current time. 
 
 
 <img src="\images\ipm_QA.png">
 
-Integrated Project Model Quality Assurance Chain
+**Integrated Project Model Quality Assurance Chain**
 
 
 As mentioned above, the Quality Assurance chain of the Integrated Project Model was evaluated. Some of the stocks, flows, and auxiliaries in the model are listed below.
@@ -69,6 +71,39 @@ As mentioned above, the Quality Assurance chain of the Integrated Project Model 
 | Stocks   |   Flows   |Auxiliaries| 
 |-----|-----|-----|
 |Tasks_worked, Potentially_detectable_errors, Detected_errors, Reworked_errors_during_devel, Escaped_errors, Cumulative_errors    | SD_rate, QA_rate, Error_generation_rate, Error_escape_rate, Error_detection_rate, rework_rate, Count_detected_errors, generation_rate  | Software_development_rate, Average_qa_delay, Potentially_detectable_errors, DSI_per_task, Multiplier_for_losses, Percent_of_job_actually_worked, Daily_MP_for_QA, Percent_of_job_actually_worked, DSI_per_task, Schedule_pressure, Ratio_of_pros_to_rookies, Software_development_rate, QA_rate, Average#errors_per_task, Daily_mp_for_rework, Multiplier_for_losses, Error_generation_rate, QA_rate, Error_density, Multiplier_due_to_error_density  |
+
+##Optimizing using DE, NSGA2 and SPEA2 
+
+
+In this project three optimizers DE, NSGA2 and SPEA2 was run on the Integrated Project Model Quality Assurance Chain. This model has a total of 47 nodes and 65 edges. The objective of the experiment was to minimize the number of detected errors and escaped errors. Each of the input nodes is assigned a random value whose bounds are stated in the Utility class. For each of the optimizers a total of 50 generations was evaluated and the minimum value of each generation was compared to find which optimizer reaches to an optimal solution in the least number of iterations. 
+
+
+For DE, the crossover rate was 0.3 and mutation factor was 0.75. The number of candidates generated was 10 * (number of decisions). For NSGA2, the population size was 100 and crossover probability was 0.9. The population size was 100 for SPEA2 as well.
+
+
+##Code
+
+
+The project has been developed in python and the structure is inspired from the Gadget class by Dr. Menzies. 
+
+
+```
+if __name__ == '__main__':
+    optimize = []
+    for optimizer in [de, nsga2, spea2]:
+        print "Optimizer: %s, " % optimizer.__name__, "Model: %s\n" % model.__name__
+        optimize.append([optimizer.__name__] + optimizer(model))
+    print(rdivDemo(optimize))
+```
+
+
+##Results
+
+
+Initially the results were calculated for a total of 25 generations and the minimum value of each generation from the optimizers was compared. The minimum value of a generation was generated by selecting the minimum among the summation of the values of the energies. The graph for the above is shown below. 
+
+
+<img src="\images\25 generations.png">
 
 
 ```
@@ -79,6 +114,16 @@ rank ,         name ,    med   ,  iqr
    2 ,           DE ,    0.07  ,  0.15 (  -----*       |              ), 0.02,  0.07,  0.17
 ```
 
+
+This table shows the ordering of the different optimizers using Scott-Knott technique suggested by A.J. Scott and M. Knott [7]. The first column shows the ranks of the optimizers in the column 2. The third and fourth column shows the median and interquartile range. The next column shows the interquartile chart. The last three columns shows the values at 30%, 50% and 70%.  
+
+
+Similar tests were conducted for a total of 50 generations and the ordering using Scott-Knott is shown.
+
+
+<img src="\images\50 generations.png">
+
+
 ```
 rank ,         name ,    med   ,  iqr 
 ----------------------------------------------------
@@ -87,32 +132,19 @@ rank ,         name ,    med   ,  iqr
    2 ,           DE ,    0.02  ,  0.04 ( ----*         |              ), 0.01,  0.02,  0.04
 ```
 
-```
-if __name__ == '__main__':
-    optimize = []
-    i = 0
-    for optimizer in [de, nsga2, spea2]:
-        print "Optimizer: %s, " % optimizer.__name__, "Model: %s\n" % model.__name__
-        optimize.append([optimizer.__name__] + optimizer(model))
-        print ""
-        i += 1
-    print optimize
-    print ""
-    print(rdivDemo(optimize))
-```
+From the results we can see that both the optimizer NSGA2 and SPEA2 are more effective in generating an optimal solution in small number of generations than DE. Although for 25 generations, SPEA2 didn’t perform as well as NSGA2, it has performed well for 50 generations. 
 
 
+##Future Work 
+* All the sectors of the Integrated Project Model can be implemented.
+* Other genetic algorithms such as SA, MWS, GALE could have been used.
+* Multiple iterations of the optimizers could have been done and average results could have considered for comparison.
 
 
-
-
-
-
-
-References
-1.	Pressman, Scott (2005), Software Engineering: A Practitioner's Approach (Sixth, International ed.), McGraw-Hill Education Pressman, p. 388
-2.	T. Abdel-Hamid, and S. Madnick, "Software Project Dynamics: An Integrated Approach", Prentice Hall, NJ, USA, 1990
-3.	Gareth Jones. Genetic and evolutionary algorithms, September 1998.
-4.	R. Storn, and K. Price, "Differential Evolution: A Simple and Efficient Heuristic for Global Optimization Over Continuous Spaces", in Journal of Global Optimization, vol. 11, no. 4, pages 341-359, December, 1997
-5.	K. Deb and S. Agrawal and A. Pratap and T. Meyarivan, "A Fast Elitist Non–dominated Sorting Genetic Algorithm for Multi–Objective Optimization: NSGA–II", Parallel Problem Solving from Nature PPSN VI, 2000.
-6.	E. Zitzler and M. Laumanns and L. Thiele, "SPEA2: Improving the strength pareto evolutionary algorithm for multiobjective optimization", in Evolutionary Methods for Design, Optimisation and Control with Application to Industrial Problems (EUROGEN 2001), 2002.
+##References
+1. Pressman, Scott (2005), Software Engineering: A Practitioner's Approach (Sixth, International ed.), McGraw-Hill Education Pressman, p. 388
+2. T. Abdel-Hamid, and S. Madnick, "Software Project Dynamics: An Integrated Approach", Prentice Hall, NJ, USA, 1990
+3. Gareth Jones. Genetic and evolutionary algorithms, September 1998.
+4. R. Storn, and K. Price, "Differential Evolution: A Simple and Efficient Heuristic for Global Optimization Over Continuous Spaces", in Journal of Global Optimization, vol. 11, no. 4, pages 341-359, December, 1997
+5. K. Deb and S. Agrawal and A. Pratap and T. Meyarivan, "A Fast Elitist Non–dominated Sorting Genetic Algorithm for Multi–Objective Optimization: NSGA–II", Parallel Problem Solving from Nature PPSN VI, 2000.
+6. E. Zitzler and M. Laumanns and L. Thiele, "SPEA2: Improving the strength pareto evolutionary algorithm for multiobjective optimization", in Evolutionary Methods for Design, Optimisation and Control with Application to Industrial Problems (EUROGEN 2001), 2002.
