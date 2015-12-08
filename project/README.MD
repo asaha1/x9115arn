@@ -10,6 +10,8 @@ Software quality is a field of study and practice that describes the desirable a
 Software quality refers to two related but distinct notions that exist wherever quality is defined in a business context – Functional Quality and Structural Quality. Software Functional Quality is the measure of how well the software complies with the given design based on the functional requirements or specifications [1]. On the other hand Software Structural Quality refers to how well the software met the non-functional requirements like robustness or maintainability. The structural quality is usually tested by analyzing the inner structure of the software such as its source code at the unit level as well as the system level. In contrast, functional quality is usually enforced by software testing. 
 
 In this paper we are typically interested in the functional quality which deals with the characteristics of the software. Typically the relative importance of different characteristics or attributes depends on who is assessing the software and what they need or expect from it [2].  Utility can be considered in many ways. Users frequently are concerned about the number and type of failures that occur during usage. Hence, the number of defects is a measure of quality but there are many other possible measures. The Integrated Project Model developed by Abdel-Hamid [2] was used to model the generation, detection, and correction of errors during development. Although the original model consists of 10 sectors as listed below, the Quality Assurance Chain was tested in this model as this is one of the most important sectors of the model.
+
+
 1. Software Development Sector
 2. Enter Project Parameters
 3. Planning Sector
@@ -23,6 +25,8 @@ In this paper we are typically interested in the functional quality which deals 
 
 
 <img src="\images\ipm_full.png">
+
+
 Integrated Project Model: image screen captured from ISEE player
 
 ##Background
@@ -55,6 +59,8 @@ The Integrated Project Model Quality Assurance Chain was implemented using the c
 
 
 <img src="\images\ipm_QA.png">
+
+Integrated Project Model Quality Assurance Chain
 
 
 As mentioned above, the Quality Assurance chain of the Integrated Project Model was evaluated. Some of the stocks, flows, and auxiliaries in the model are listed below.
