@@ -38,18 +38,18 @@ Evolutionary algorithms or EAs are computer programs that attempt to solve compl
 The optimizers used in this project are Differential Evolution (DE), Non Sorting Genetic Algorithm II (NSGA2) and Strength Pareto Evolutionary Algorithm II (SPEA2). These algorithms are based on Darwinian principles and uses iterative progress, such as growth or development in a population. 
 
 
-DE was invented by Storn and Price [4]. It is a method that optimizes a problem by iteratively trying to improve a candidate solution with regard to a given measure of quality. DE optimizes a problem by maintaining a population of candidate solutions and creating new candidate solutions by combining existing ones according to its simple formulae, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. DE builds new candidates by extrapolating between members of the current frontier using the algorithm: 
+**DE** was invented by Storn and Price [4]. It is a method that optimizes a problem by iteratively trying to improve a candidate solution with regard to a given measure of quality. DE optimizes a problem by maintaining a population of candidate solutions and creating new candidate solutions by combining existing ones according to its simple formulae, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. DE builds new candidates by extrapolating between members of the current frontier using the algorithm: 
 * No needs for frequency tables of better ranges
   * The frontier has the better ranges;
 * Pick three things (X,Y,Z);
-  * At some probability (called the crossover factor):
+* At some probability (called the crossover factor):
   * New = X + f * (Y - Z)
 
 
-NSGA2 was invented by Srinivas and Deb [5]. The objective of the NSGA algorithm is to improve the adaptive fit of a population of candidate solutions to a Pareto front constrained by a set of objective functions. The algorithm uses an evolutionary process with surrogates for evolutionary operators including selection, genetic crossover, and genetic mutation. The population is sorted into a hierarchy of sub-populations based on the ordering of Pareto dominance. Similarity between members of each sub-group is evaluated on the Pareto front, and the resulting groups and similarity measures are used to promote a diverse front of non-dominated solutions. 
+**NSGA2** was invented by Srinivas and Deb [5]. The objective of the NSGA algorithm is to improve the adaptive fit of a population of candidate solutions to a Pareto front constrained by a set of objective functions. The algorithm uses an evolutionary process with surrogates for evolutionary operators including selection, genetic crossover, and genetic mutation. The population is sorted into a hierarchy of sub-populations based on the ordering of Pareto dominance. Similarity between members of each sub-group is evaluated on the Pareto front, and the resulting groups and similarity measures are used to promote a diverse front of non-dominated solutions. 
 
 
-SPEA2 was invented by E.Zitler et al [6]. The objective of the algorithm is to locate and and maintain a front of non-dominated solutions, ideally a set of Pareto optimal solutions. This is achieved by using an evolutionary process (with surrogate procedures for genetic recombination and mutation) to explore the search space, and a selection process that uses a combination of the degree to which a candidate solution is dominated (strength) and an estimation of density of the Pareto front as an assigned fitness. An archive of the non-dominated set is maintained separate from the population of candidate solutions used in the evolutionary process, providing a form of elitism.
+**SPEA2** was invented by E.Zitler et al [6]. The objective of the algorithm is to locate and and maintain a front of non-dominated solutions, ideally a set of Pareto optimal solutions. This is achieved by using an evolutionary process (with surrogate procedures for genetic recombination and mutation) to explore the search space, and a selection process that uses a combination of the degree to which a candidate solution is dominated (strength) and an estimation of density of the Pareto front as an assigned fitness. An archive of the non-dominated set is maintained separate from the population of candidate solutions used in the evolutionary process, providing a form of elitism.
 
 ##Implementation
 
@@ -136,15 +136,20 @@ From the results we can see that both the optimizer NSGA2 and SPEA2 are more eff
 
 
 ##Future Work 
+
+
 * All the sectors of the Integrated Project Model can be implemented.
-* Other genetic algorithms such as SA, MWS, GALE could have been used.
+* Other genetic algorithms such as SA, MWS, GALE could have been used for comparison.
 * Multiple iterations of the optimizers could have been done and average results could have considered for comparison.
 
 
 ##References
+
+
 1. Pressman, Scott (2005), Software Engineering: A Practitioner's Approach (Sixth, International ed.), McGraw-Hill Education Pressman, p. 388
 2. T. Abdel-Hamid, and S. Madnick, "Software Project Dynamics: An Integrated Approach", Prentice Hall, NJ, USA, 1990
 3. Gareth Jones. Genetic and evolutionary algorithms, September 1998.
 4. R. Storn, and K. Price, "Differential Evolution: A Simple and Efficient Heuristic for Global Optimization Over Continuous Spaces", in Journal of Global Optimization, vol. 11, no. 4, pages 341-359, December, 1997
 5. K. Deb and S. Agrawal and A. Pratap and T. Meyarivan, "A Fast Elitist Non–dominated Sorting Genetic Algorithm for Multi–Objective Optimization: NSGA–II", Parallel Problem Solving from Nature PPSN VI, 2000.
 6. E. Zitzler and M. Laumanns and L. Thiele, "SPEA2: Improving the strength pareto evolutionary algorithm for multiobjective optimization", in Evolutionary Methods for Design, Optimisation and Control with Application to Industrial Problems (EUROGEN 2001), 2002.
+7. A.J. Scott & M. Knott. A cluster analysis method for grouping means in the analysis of variance. Biometrics, 30 (1974), 507-512.
