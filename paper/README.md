@@ -105,9 +105,9 @@ The components of a dynamic web application communicate extensively via their in
 Many approached to interface identification has been made. Most of them rely on developer provided interface specifications. Ricca and Tonella uses developer-provided UML models [1], Jian and Liu use a formal specification [2], and Andrews, Offutt, and Alexander [3] use finite state machines. An approach by Elbaum and colleagues [4] uses a series of requests to an application to identify its interfaces and infer constraints on the IPs of the interfaces by analyzing responses to the request. A spider by Huang and colleagues [5] uses sophisticated heuristics to more effectively and thoroughly explore a web app. lication.
 
 #####Informative visualizations: 
-<img src = "../hw/read/1/1. analysis time.png"> </br>
+<img src = "../hw/read/4/1. analysis time.png"> </br>
 This table shows the result of the timing experiments. For each application, the table shows the time in seconds to analyze the web application (Total Time).</br>
-<img src = "../hw/read/1/2. precision.png"> </br>
+<img src = "../hw/read/4/2. precision.png"> </br>
 This table shows the comparison of wam-se and wam-df. For each application (Subject) we list the number of interfaces identified and, in parenthesis for the wam-df approach, the additional amount of identified interfaces as compared to wam-se.</br>
 
 #####Delivery Tools: 
@@ -118,4 +118,39 @@ The authors has developed a tool in Java called WAM-SE (Web Application Modeling
 * **PC Analysis-** implements the analysis. The input to this module is the set of PCs and symbolic states for each component in the application, and the output is the set of IDCs and accepted interfaces. The module iterates over every PC and symbolic state, identies the accepted interfaces, and associates the constraints on each IP with its corresponding accepted interface.
 
 
-###5.2. Application testing techniques
+###5.2. Test case generation:
+
+####5.2.1. Automatic string test data generation for detecting domain errors. 
+
+#####Overview:
+
+This paper presents a novel approach for the automatic generation of ON–OFF test points for string predicate borders, and describes a corresponding test data generator. The empirical work is conducted on a set of programs with string predicates, where extensive trials have been done for each string predicate, and the results are analyzed using the SPSS tool. 
+
+#####Keywords: 
+
+* **Domain Testing:** Domain testing is a software testing technique in which selecting a small number of test cases from (usually a nearly infinite) group of test cases. This is used for testing software.
+* **Dynamic Test data generation:** Generation of the test data on the go where the generator intelligently modifies the test data.
+* **ON-OFF test points:** ON test point lies on the given solution predicate border whereas the OFF test point lies just outside the border. They both are as close as possible to check the border points.
+* **String predicate:** In this paper the string predicate border is tested on.
+
+
+#####Motivational Statements: 
+
+A lot of work on domain testing is getting generated to guarantee software quality and reliability. The most expensive step in the testing is test case generation and effective test cases determine the reliability of the software. Manually developing the test data set is expensive, laborious, difficult and error prone. So the paper is based on automatic generation of test data.
+
+#####Related Work: 
+
+The earlier studies which have used ON-OFF test generation has focused only on numeric types and ignored string data. The studies which addressed string test generation used string mutation operators like insertion, deletion and substitution. This study specifically addressed the problem of ON-OFF test data generation on string predicates.
+
+#####Informative Visualizations:
+
+<img src = "../hw/read/2/pic1.png"> </br>
+Compare different initial characters for predicates with literal.</br>
+<img src = "../hw/read/2/pic2.png"> </br>
+Compare different initial characters for predicates with fixed length</br>
+<img src = "../hw/read/2/pic3.png"> </br>
+Compare different initial characters for predicates with varied length</br>
+
+#####Future Works: 
+
+The system is currently semi-automated but the aim should be to produce a fully-automated product. If the test string in the predicate is a literal that contains one character then for predicate Max-pre1, the conclusions get invalid. These are the areas where development can be done.
