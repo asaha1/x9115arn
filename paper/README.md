@@ -142,15 +142,37 @@ A lot of work on domain testing is getting generated to guarantee software quali
 
 The earlier studies which have used ON-OFF test generation has focused only on numeric types and ignored string data. The studies which addressed string test generation used string mutation operators like insertion, deletion and substitution. This study specifically addressed the problem of ON-OFF test data generation on string predicates.
 
-#####Informative Visualizations:
-
-<img src = "../hw/read/2/pic1.png"> </br>
-Compare different initial characters for predicates with literal.</br>
-<img src = "../hw/read/2/pic2.png"> </br>
-Compare different initial characters for predicates with fixed length</br>
-<img src = "../hw/read/2/pic3.png"> </br>
-Compare different initial characters for predicates with varied length</br>
 
 #####Future Works: 
 
 The system is currently semi-automated but the aim should be to produce a fully-automated product. If the test string in the predicate is a literal that contains one character then for predicate Max-pre1, the conclusions get invalid. These are the areas where development can be done.
+
+####5.2.2. Finding bugs in web applications using dynamic test generation and explicit state model checking.
+
+#####Overview: 
+
+This technique generates tests automatically, runs the tests capturing logical constraints on inputs, and minimizes the conditions on the inputs to failing tests so that the resulting bug reports are small and useful in finding and fixing the underlying faults. The tool Apollo implements the technique for the PHP programming language. Apollo generates test inputs for a Web application, monitors the application for crashes, and validates that the output conforms to the HTML specification. This paper presents Apollo’s algorithms and implementation, and an experimental evaluation that revealed 673 faults in six PHP Web applications.
+
+#####Keywords:
+
+* **Web application:** These are those types of software based applications which run on a web browser. They are originally written in scripting languages and their control does not flow via simply the code but via the generated HTML text.
+* **Failures in HTML:** When a problem in HTML is generated this type of error occurs. 
+* **Explicit-state model checking:** It is that type of algorithm that reaches only a single level deep in the application. That means it is an algorithm that always starts the checking again from the same initial state and removes the state reached at the end of each execution. 
+* **Static analysis:** It is the type of debugging technique which is done before the execution of program. It helps to provide a better understanding of the code. 
+
+
+#####Motivational Statements: 
+
+The goal of this paper is to provide a solution for avoiding problems caused by malformed web pages and web script crashes. It does this by using dynamic test generation technique. This is an automated technique which generates input and runs the code, then varies the input to obtain a bug report. 
+
+#####Tools used: 
+
+The prime tool used in the above mentioned test is Apollo. The first step taken by it is to execute the web application with an empty input under test. It records the dependence of control flow on input after each execution. It determines the type of failures that occur, i.e. whether the failures are execution failures or HTML failures. 
+
+#####Tutorials: 
+
+This paper teaches a lot of things. It shows there are two types of errors which could occur in a web application, namely HTML error and execution error. The examples mentioned are in a very organized format in a step by step way for readers with little knowledge on the subject to understand easily. 
+
+#####Final results: 
+
+The tool used in the test obtains a detailed report of the bug or errors which is very beneficial for readers and other researchers. The presence of accurate data and real time examples makes Apollo understandable.
