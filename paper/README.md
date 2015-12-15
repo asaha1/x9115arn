@@ -1,7 +1,7 @@
 #A Review of the Recent Developments in Automated Web Application Testing
 -	Arnab Saha (asaha@ncsu.edu)
 
-##1. ABSTRACT
+##1. Abstract
 
 Testing is among the most labor intensive tasks in web application development and also one that has a strong impact on the effectiveness and efficiency of application. For these reasons it has been one of the most active topics in the research on web application testing for several decades, resulting in many approaches and tools. This paper presents a review of some of the prominent techniques for automatic generation of test cases and optimizing other aspects of web application testing.
 
@@ -31,11 +31,29 @@ Despite a lot of advantages of web applications and technologies on our lives, t
 However inadequate testing poses significant risks. For example some studies has shown that online customers has impulsive purchasing habits therefore an e-commerce store can lose a lot of money if there is significant amoun¬t of downtime. With the help of the automation in web application testing, these risks can be reduced at much lesser costs.
 
 
-##5. Survey results: 
+##5. Survey results 
 
 In this paper we have studied a range of papers related to different aspects of web applications testing in the last decade. Here we have tried to provide a brief overview of the papers and how they are relevant in automating some aspects of testing. We have divided the papers into three categories:
 * Application testing techniques
 * Test case generation
 * Surveys on web application testing
 
+
+Each of these categories is described below with some papers relevant to it. 
+
+
 ###5.1. Application testing techniques
+Two application testing papers are studied which are described below. 
+
+####5.1.1. Automated Web Application Testing Using Search Based Software Engineering
+#####Keywords:
+ii1. SBST: Search-Based Software Testing [2] is used to automate or partially automate a testing task using meta-heuristic optimizing search technique.
+ii2. Automated Test data generation: A system that generates test data for a program automatically.
+ii3. SWAT: Search based Web Application Tester [1] is the tool used for SBST. It is composed of a Pre-processing unit, Search Based Tester and the Test Harness.
+ii4. DMV: Dynamically Mined Value is used to seed values in the inputs dynamically during execution.
+
+ii.	Brief Notes:
+iii1. Motivational statements: Successful web applications get modified each day to adopt the needs of its users but due to time and labor constraints they are often not tested properly. Now due to inadequate testing, applications face a lot of risk such as increased down time and potential loss of customers and money. Therefore a lot of research is being made to automate the testing phase by using Search based testing.
+iii2. Related Work: The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [3]. The branch ordering technique is inspired from Michael et al. [4]. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci [5]. Other than that Artzi et al. [6] generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al. [7].
+iii3. Informative visualizations: 
+iii4. Future Works: The system is currently semi-automated but the aim should be to produce a fully-automated product. Though major parts of the algorithm works independently, deciding input types and username/password needs to provided by the user. We also find that the algorithm doesn’t show usual characteristics in the case of Timeclock application. The author states that the behavior is due to the high precision in float constants which are mined from the application. The algorithm can be improved to handle all data types.  
