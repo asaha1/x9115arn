@@ -43,17 +43,38 @@ Each of these categories is described below with some papers relevant to it.
 
 
 ###5.1. Application testing techniques
-Two application testing papers are studied which are described below. 
+Two application testing papers are studied which are described below.
 
 ####5.1.1. Automated Web Application Testing Using Search Based Software Engineering
-#####Keywords:
-ii1. SBST: Search-Based Software Testing [2] is used to automate or partially automate a testing task using meta-heuristic optimizing search technique.
-ii2. Automated Test data generation: A system that generates test data for a program automatically.
-ii3. SWAT: Search based Web Application Tester [1] is the tool used for SBST. It is composed of a Pre-processing unit, Search Based Tester and the Test Harness.
-ii4. DMV: Dynamically Mined Value is used to seed values in the inputs dynamically during execution.
 
-ii.	Brief Notes:
-iii1. Motivational statements: Successful web applications get modified each day to adopt the needs of its users but due to time and labor constraints they are often not tested properly. Now due to inadequate testing, applications face a lot of risk such as increased down time and potential loss of customers and money. Therefore a lot of research is being made to automate the testing phase by using Search based testing.
-iii2. Related Work: The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [3]. The branch ordering technique is inspired from Michael et al. [4]. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci [5]. Other than that Artzi et al. [6] generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al. [7].
-iii3. Informative visualizations: 
-iii4. Future Works: The system is currently semi-automated but the aim should be to produce a fully-automated product. Though major parts of the algorithm works independently, deciding input types and username/password needs to provided by the user. We also find that the algorithm doesn’t show usual characteristics in the case of Timeclock application. The author states that the behavior is due to the high precision in float constants which are mined from the application. The algorithm can be improved to handle all data types.  
+####Overview:
+
+This paper introduces three related algorithms and a tool, SWAT, for automated web application testing using Search Based Software Testing (SBST).
+
+
+#####Keywords:
+* **SBST:** Search-Based Software Testing [2] is used to automate or partially automate a testing task using meta-heuristic optimizing search technique.
+* **Automated Test data generation:** A system that generates test data for a program automatically.
+* **SWAT:** Search based Web Application Tester [1] is the tool used for SBST. It is composed of a Pre-processing unit, Search Based Tester and the Test Harness.
+* **DMV:** Dynamically Mined Value is used to seed values in the inputs dynamically during execution.
+
+
+####Motivational statements: 
+
+Successful web applications get modified each day to adopt the needs of its users but due to time and labor constraints they are often not tested properly. Now due to inadequate testing, applications face a lot of risk such as increased down time and potential loss of customers and money. Therefore a lot of research is being made to automate the testing phase by using Search based testing.
+
+####Related Work: 
+
+The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [3]. The branch ordering technique is inspired from Michael et al. [4]. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci [5]. Other than that Artzi et al. [6] generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al. [7].
+####Informative visualizations: 
+<img src = "visual 1 main table.png"> <br>
+The total evaluation is summed up in one table. The authors implemented three versions of the tool:
+<ol>
+    <li>Near Miss Seeding (NMS)</li>
+    <li>Static Constant Seeding (SCS) with NMS</li>
+    <li>Dynamically Mined Value (DMV) with SCS</li>
+</ol>
+Then empirical evidence is collected how enhancements affect branch coverage, efficiency and fault finding ability.
+####Future Works: 
+
+The system is currently semi-automated but the aim should be to produce a fully-automated product. Though major parts of the algorithm works independently, deciding input types and username/password needs to provided by the user. We also find that the algorithm doesn’t show usual characteristics in the case of Timeclock application. The author states that the behavior is due to the high precision in float constants which are mined from the application. The algorithm can be improved to handle all data types.  
