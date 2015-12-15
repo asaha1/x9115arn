@@ -59,14 +59,14 @@ This paper introduces three related algorithms and a tool, SWAT, for automated w
 * **DMV:** Dynamically Mined Value is used to seed values in the inputs dynamically during execution.
 
 
-####Motivational statements: 
+#####Motivational statements: 
 
-Successful web applications get modified each day to adopt the needs of its users but due to time and labor constraints they are often not tested properly. Now due to inadequate testing, applications face a lot of risk such as increased down time and potential loss of customers and money. Therefore a lot of research is being made to automate the testing phase by using Search based testing.
+This paper introduces three related algorithms and a tool, SWAT, for automated web application testing using Search Based Software Testing (SBST). The algorithms significantly enhance the efficiency and effectiveness of traditional search based techniques exploiting both static and dynamic analysis. The combined approach yields a 54% increase in branch coverage and a 30% reduction in test effort. Each improvement is separately evaluated in an empirical study on 6 real world web applications.
 
-####Related Work: 
+#####Related Work: 
 
 The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [3]. The branch ordering technique is inspired from Michael et al. [4]. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci [5]. Other than that Artzi et al. [6] generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al. [7].
-####Informative visualizations: 
+#####Informative visualizations: 
 <img src = "../hw/read/1/visual 1 main table.png"> <br>
 The total evaluation is summed up in one table. The authors implemented three versions of the tool:
 <ol>
@@ -75,6 +75,47 @@ The total evaluation is summed up in one table. The authors implemented three ve
     <li>Dynamically Mined Value (DMV) with SCS</li>
 </ol>
 Then empirical evidence is collected how enhancements affect branch coverage, efficiency and fault finding ability.
-####Future Works: 
+
+#####Future Works: 
 
 The system is currently semi-automated but the aim should be to produce a fully-automated product. Though major parts of the algorithm works independently, deciding input types and username/password needs to provided by the user. We also find that the algorithm doesn’t show usual characteristics in the case of Timeclock application. The author states that the behavior is due to the high precision in float constants which are mined from the application. The algorithm can be improved to handle all data types.  
+
+
+####5.1.2. Precise Interface Identification to Improve Testing and Analysis of Web Applications. In ISSTA ’09, pages 285–296, 2009
+
+#####Overview: 
+
+The current techniques for identifying web application interfaces can be incomplete or imprecise, which hinders the effectiveness of quality assurance techniques. To address these limitations, this paper presents a new approach for identifying web application interfaces that is based on a specialized form of symbolic execution. It shows that the set of interfaces identified by their approach is more accurate than those identified by other approaches. It also shows that this increased accuracy leads to improvements in several important quality assurance techniques for web applications: test-input generation, penetration testing, and invocation verification.
+
+
+#####Keywords:
+
+* **Interface identification:** The interface execution is dependent on the input parameters and the flow of execution therefore varies at runtime for web based applications.
+* **Symbolic execution:** A program operates on symbolic inputs that can represent arbitrary values and at any point in the execution variables dependent on the input are represented as algebraic expressions over the symbolic input values. 
+* **ii3. Path Condition (PC):** PC expresses constraints on the symbolic inputs that must be satisfied in order for execution to reach a specific point in the program.
+* **ii4. Web crawling:** It is a common approach to identify accepted interfaces. In this approach, a program called the web spider visits and analyses web pages to discover links to other pages till there are no new links to visit. This information is used to infer interface information about the individual components.
+
+
+#####Motivational statements: 
+
+The components of a dynamic web application communicate extensively via their interfaces to generate the dynamic content. In web applications these interfaces are not implicitly defined and vary at runtime. Automated quality assurance is necessary for ensuring quality in these applications.
+
+#####Related Work: 
+
+Many approached to interface identification has been made. Most of them rely on developer provided interface specifications. Ricca and Tonella uses developer-provided UML models [1], Jian and Liu use a formal specification [2], and Andrews, Offutt, and Alexander [3] use finite state machines. An approach by Elbaum and colleagues [4] uses a series of requests to an application to identify its interfaces and infer constraints on the IPs of the interfaces by analyzing responses to the request. A spider by Huang and colleagues [5] uses sophisticated heuristics to more effectively and thoroughly explore a web app. lication.
+
+#####Informative visualizations: 
+<img src = "../hw/read/1/1. analysis time.png"> </br>
+This table shows the result of the timing experiments. For each application, the table shows the time in seconds to analyze the web application (Total Time).</br>
+<img src = "../hw/read/1/2. precision.png"> </br>
+This table shows the comparison of wam-se and wam-df. For each application (Subject) we list the number of interfaces identified and, in parenthesis for the wam-df approach, the additional amount of identified interfaces as compared to wam-se.</br>
+
+#####Delivery Tools: 
+
+The authors has developed a tool in Java called WAM-SE (Web Application Modeling with Symbolic Execution) to evaluate their approach. It consists of three modules:
+* **Transform-** is used to implement the symbolic transformation. The input to this module is the bytecode of the web application and the specification of program entities to be considered symbolic (in this case, symbolic strings).
+* **SE Engine-** implements the symbolic execution. The input to this module is the bytecode of the transformed web application, and the output is the set of all PCs and corresponding symbolic states for each component in the application.
+* **PC Analysis-** implements the analysis. The input to this module is the set of PCs and symbolic states for each component in the application, and the output is the set of IDCs and accepted interfaces. The module iterates over every PC and symbolic state, identies the accepted interfaces, and associates the constraints on each IP with its corresponding accepted interface.
+
+
+###5.2. Application testing techniques
