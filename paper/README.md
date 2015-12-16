@@ -31,7 +31,7 @@ Despite a lot of advantages of web applications and technologies on our lives, t
 However inadequate testing poses significant risks. For example some studies has shown that online customers has impulsive purchasing habits therefore an e-commerce store can lose a lot of money if there is significant amoun¬t of downtime. With the help of the automation in web application testing, these risks can be reduced at much lesser costs.
 
 
-##5. Survey results 
+##5. Review results 
 
 In this paper we have studied a range of papers related to different aspects of web applications testing in the last decade. Here we have tried to provide a brief overview of the papers and how they are relevant in automating some aspects of testing. We have divided the papers into three categories:
 * Application testing techniques
