@@ -45,7 +45,7 @@ Each of these categories is described below with some papers relevant to it.
 ###5.1. Application testing techniques
 Two application testing papers are studied which are described below.
 
-####5.1.1. Automated Web Application Testing Using Search Based Software Engineering
+####5.1.1. Automated Web Application Testing Using Search Based Software Engineering [1]
 
 ####Overview:
 
@@ -53,7 +53,7 @@ This paper introduces three related algorithms and a tool, SWAT, for automated w
 
 
 #####Keywords:
-* **SBST:** Search-Based Software Testing [2] is used to automate or partially automate a testing task using meta-heuristic optimizing search technique.
+* **SBST:** Search-Based Software Testing is used to automate or partially automate a testing task using meta-heuristic optimizing search technique.
 * **Automated Test data generation:** A system that generates test data for a program automatically.
 * **SWAT:** Search based Web Application Tester [1] is the tool used for SBST. It is composed of a Pre-processing unit, Search Based Tester and the Test Harness.
 * **DMV:** Dynamically Mined Value is used to seed values in the inputs dynamically during execution.
@@ -65,7 +65,7 @@ This paper introduces three related algorithms and a tool, SWAT, for automated w
 
 #####Related Work: 
 
-The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [3]. The branch ordering technique is inspired from Michael et al. [4]. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci [5]. Other than that Artzi et al. [6] generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al. [7].
+The authors mention in the paper that though SBSE has been popular for a long time, search based data generation was not applied for web applications. Marchetto and Tonella used a Hill Climbing algorithm for testing Ajax web applications. They have adopted the Alternating Variable Method (AVM) introduced by Korel [10]. The branch ordering technique is inspired from Michael et al. Levenshtein distance to calculate the fitness of strings was used from Alshraideh and Bottaci. Other than that Artzi et al. [11]generated test cases for dynamic web applications automatically though the approach was different as it focused on statement coverage instead of branch coverage as in this paper. This paper uses bypass testing to bypass the interface to generate data for the server side code which was introduced by Offut et al.
 #####Informative visualizations: 
 <img src = "../hw/read/1/visual 1 main table.png"> <br>
 The total evaluation is summed up in one table. The authors implemented three versions of the tool:
@@ -102,7 +102,7 @@ The components of a dynamic web application communicate extensively via their in
 
 #####Related Work: 
 
-Many approached to interface identification has been made. Most of them rely on developer provided interface specifications. Ricca and Tonella uses developer-provided UML models [1], Jian and Liu use a formal specification [2], and Andrews, Offutt, and Alexander [3] use finite state machines. An approach by Elbaum and colleagues [4] uses a series of requests to an application to identify its interfaces and infer constraints on the IPs of the interfaces by analyzing responses to the request. A spider by Huang and colleagues [5] uses sophisticated heuristics to more effectively and thoroughly explore a web app. lication.
+Many approached to interface identification has been made. Most of them rely on developer provided interface specifications. Ricca and Tonella uses developer-provided UML models [12], Jian and Liu use a formal specification, and Andrews, Offutt, and Alexander [13] use finite state machines. An approach by Elbaum and colleagues [14] uses a series of requests to an application to identify its interfaces and infer constraints on the IPs of the interfaces by analyzing responses to the request. A spider by Huang and colleagues uses sophisticated heuristics to more effectively and thoroughly explore a web app. lication.
 
 #####Informative visualizations: 
 <img src = "../hw/read/4/1. analysis time.png"> </br>
@@ -190,16 +190,16 @@ The tool used in the test obtains a detailed report of the bug or errors which i
 
 #####Baseline Results: 
 
-The paper presents the results of an empirical study evaluating our approach [1]. The study was conducted on 24 string input validation routines collected from 10 open source projects. While dynamic symbolic execution and search-based testing approaches were only able to generate a very low number of values successfully, our approach generated values with an accuracy of 34% on average for the case of valid strings, and 99% on average for the case of invalid strings.
+The paper presents the results of an empirical study evaluating our approach [7]. The study was conducted on 24 string input validation routines collected from 10 open source projects. While dynamic symbolic execution and search-based testing approaches were only able to generate a very low number of values successfully, our approach generated values with an accuracy of 34% on average for the case of valid strings, and 99% on average for the case of invalid strings.
 
 
 #####Motivational Statements: 
 
-There has been much work in the literature of late devoted to automated test input generation [4], however handling string input types remains a challenging task [5, 6]. This is due to the inherent complexity of real - world data that is naturally encoded as strings — e.g., dates of different formats, banking codes, registration numbers, etc. — which have very large input domains, and consequently, involve a huge search space for test data generation. In the paper web searches are made for strings that match the regular expressions, producing examples of test cases that are both valid and realistic. Following this, our technique mutates the regular expressions to drive the search for invalid strings, and the production of test inputs that should be rejected by the validation routine.
+There has been much work in the literature of late devoted to automated test input generation [15], however handling string input types remains a challenging task [16, 17]. This is due to the inherent complexity of real - world data that is naturally encoded as strings — e.g., dates of different formats, banking codes, registration numbers, etc. — which have very large input domains, and consequently, involve a huge search space for test data generation. In the paper web searches are made for strings that match the regular expressions, producing examples of test cases that are both valid and realistic. Following this, our technique mutates the regular expressions to drive the search for invalid strings, and the production of test inputs that should be rejected by the validation routine.
 
 #####Related work: 
 
-The input validation problem has been addressed in the classic software testing literature [2]. The earlier approaches assume the provision of grammars from which the inputs can be generated. Beizer [2] has presented approaches for syntax testing, also called grammar-based testing, where the syntax of the input is expressed in a formal specification, such as BNF and its equivalent graph. Then the valid inputs are generated by “covering” the graph. Invalid values can also be generated by employing heuristics such as interchanging terminal and non-terminal symbols (in the BNF), replacing numeric with alphabetic values and generating extra delimiters in the valid values — the so-called “error-condition” rules[3].
+The input validation problem has been addressed in the classic software testing literature [18]. The earlier approaches assume the provision of grammars from which the inputs can be generated. Beizer [2] has presented approaches for syntax testing, also called grammar-based testing, where the syntax of the input is expressed in a formal specification, such as BNF and its equivalent graph. Then the valid inputs are generated by “covering” the graph. Invalid values can also be generated by employing heuristics such as interchanging terminal and non-terminal symbols (in the BNF), replacing numeric with alphabetic values and generating extra delimiters in the valid values — the so-called “error-condition” rules[19].
 
 ###5.3. Surveys on web application testing
 
@@ -207,7 +207,7 @@ The input validation problem has been addressed in the classic software testing 
 
 #####Keywords:
 
-* **SPL:** A Software product line is a collection of similar products of where all share some core functionality, where each differs in some specific features [10].
+* **SPL:** A Software product line is a collection of similar products of where all share some core functionality, where each differs in some specific features [8].
 * **SBSE:** SBSE is a process of using computation search as a technique to optimize software engineering problems. 
 * **Program Synthesis:** The task of autonomously discovering an executable piece of code using various constraints such as input-output examples.
 * **Genetic Programming:** It is an algorithm inspired by biological evolution to find computer codes that perform a user defined task.
@@ -250,3 +250,42 @@ The authors explain that this study is an extension of the Systematic Mapping st
 #####Patterns and anti-patterns: 
 
 The authors included 95 of the initial 193 papers in this study. They synthesized the following data/findings from the papers: (1) the types of input/inferred test models, (2) the fault models/bug taxonomy related to web applications, (3) test tools proposed in this area and their capabilities, (4) metrics used for assessing cost and effectiveness of WAT techniques, (5) the threats to validity in the empirical studies, (6) level of rigor and industrial relevance of the empirical studies, and (7) evidence regarding the scalability of the WAT techniques. In answering RQ 1.2, they have extracted the types of fault models/bug taxonomies specific to web applications. They also found that over 50 types of faults have been discussed. Test techniques targeting some of these fault types have been proposed. It is worth conducting more in-depth studies in future to ensure coverage of all the fault types by the test techniques and also the effectiveness of those techniques on detecting each specific fault type.
+
+###6. Conclusion 
+
+The web has proven to be a powerful medium for delivering software services over the Internet. Due to its inherent distributed complexity and dynamism, testing is known to be a challenge for web developers. That is why many researchers have worked in this domain from the early days of web. 
+
+
+In this review we have classified the papers into three categories and discussed the different aspects of these papers. We have seen that the most popular approach has been search based software testing for testing like test case generation and non-functional properties. 
+
+
+We found that SWAT algorithms [1] significantly enhance the efficiency and effectiveness of traditional search based techniques exploiting both static and dynamic analysis which improved branch coverage and reduced test effort. Also we found that on using symbolic execution [4] techniques led to improvements in several important quality assurance techniques for web applications: test-input generation, penetration testing, and invocation verification.
+
+
+This review indicates that web testing is an active area of research with an increasing number of publications. We have also found there are areas which need additional investigation for web application testing like mutation testing, coverage testing and concolic testing. 
+
+
+Finally the use of automated web application testing techniques has significantly reduced the time spent in testing. However the industry has to adopt the new techniques to generate feedback and make the solutions even better. In the next few years we can hope that more research will be done in this field and probably manual testing can be avoided totally.
+
+
+###7. References
+1. Nadia Alshahwan and Mark Harman. 2011. Automated Web Application Testing Using Search Based Software Engineering. In Proceedings of the 26th IEEE/ACM International Conference on Automated Software Engineering
+2. dsf
+3. fdf
+4. William G.J. Halfond, Saswat Anand, and Alessandro Orso. Precise Interface Identification to Improve Testing and Analysis of Web Applications. In ISSTA ’09, pages 285–296, 2009
+5. fdffd
+6. fdffdfd
+7. Shahbaz, Muzammil, Phil McMinn, and Mark Stevenson. "Automatic generation of valid and invalid test data for string validation routines using web searches and regular expressions." Science of Computer Programming 97 (2015): 405-425.</br>
+8. SBSE for software product line engineering: a survey and directions for future work,M. Harman, Y. Jia, J. Krinke, W. B. Langdon, J. Petke & Y. Zhang CREST Centre, University College London, Malet Place, London, WC1E 6BT, U.K.</br>
+9. Garousi, V., Mesbah, A., Betin-Can, A., Mirshokraie, S., 2013. A systematic mapping of web application testing. Elsevier Journal of Information and Software Technology 55, 1374–1396.
+10. B. Korel. Automated software test data generation. IEEE Transactions on Software Engineering, 16(8):870–879, 1990.
+11. Shay Artzi, Adam Kiezun, Julian Dolby, Frank Tip, Daniel Dig, Amit Paradkar, and Michael D. Ernst. Finding bugs in web applications using dynamic test generation and explicit-state model checking. IEEE Transactions on Software Engineering, 36:474–494, 2010.
+12. F. Ricca and P. Tonella. Analysis and Testing of Web Applications. In International Conference on Software Engineering, pages 25-34, May 2001.
+13. A. A. Andrews, J. Outt, and R. T. Alexander. Testing Web Applications by Modeling with FSMs. In Software Systems and Modeling, pages 326-345, July 2005.
+14. S. Elbaum, K.-R. Chilakamarri, M. F. II, and G. Rothermel. Web Application Characterization Through Directed Requests. In International Workshop on Dynamic Analysis, pages 49-56, May 2006.
+15. S. Anand, E. Burke, T. Y. Chen, J. Clark, M. B. Cohen, W. Grieskamp, M. Harman, M. J. Harrold, P. McMinn, An orchestrated survey on automated software test case generation, J. Syst. Softw. 86(8) (2013) 1978–2001.</br>
+16. P. Mc Minn, M. Shahbaz, M. Stevenson, Search-based test input generation for string data types using the results of web queries, in: Proceedings of the 5th International Conference on Software Testing, Verification and Validation (ICST), IEEE Computer Society, 2012, pp. 141–150.</br>
+17. M. Shahbaz, P. Mc Minn, M. Stevenson, Automated discovery of valid test strings from the web using dynamic regular expressions collation and natural language processing, in: Proceedings of the 12th International Conference on Quality Software (QSIC), 2012, pp. 79–88.</br>
+18. B. Beizer, Software Testing Techniques, International Thomson Computer Press, 1990.</br>
+19. C. Cadar and D. R. Engler. Execution generated test cases: How to make system code crash itself. In Model Checking Software, 12th International SPIN Workshop, pages 2–23, 2005. </br>
+20. f
