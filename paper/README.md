@@ -279,7 +279,7 @@ The web has had a significant impact on all aspects of our society. As our socie
 
 #####Related Work: 
 
-The authors explain that this study is an extension of the Systematic Mapping study [1]. The paper classifies the related works in three categories: (1) secondary studies that have been reported in the broader area of software testing, (2) online repositories in software engineering, and (3) secondary studies focusing on web application testing. The studies are shown in the table below.
+The authors explain that this study is an extension of the Systematic Mapping study [9]. The paper classifies the related works in three categories: (1) secondary studies that have been reported in the broader area of software testing, (2) online repositories in software engineering, and (3) secondary studies focusing on web application testing. The studies are shown in the table below.
   
 #####Patterns and anti-patterns: 
 
