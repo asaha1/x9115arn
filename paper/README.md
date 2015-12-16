@@ -261,10 +261,10 @@ There are some possibilities for new avenues of work in which the community migh
 
 #####Related work: 
 
-The term \'Search Based Software Engineering\', coined in 2001 [1], refers to the use of computational search as a means of optimising software engineering problems. Since 2001, SBSE has been used to address challenging software engineering problems with large and complex search spaces, characterised by many conflicting competing objectives, in areas as diverse as requirements [4], predictive modelling [2, 3] software project management [5], design [6], testing [7], refactoring [8] and repair [9]. This wide applicability to problems characterised by similar features to those found in SPL engineering, naturally suggests that SBSE will find successful applications in SPL optimisation. This observation has led to a recent upsurge in interest and activity in the area of `SBSE for SPL'.
+The term Search Based Software Engineering, coined in 2001 [1], refers to the use of computational search as a means of optimising software engineering problems. Since 2001, SBSE has been used to address challenging software engineering problems with large and complex search spaces, characterised by many conflicting competing objectives, in areas as diverse as requirements [4], predictive modelling [2, 3] software project management [5], design [6], testing [7], refactoring [8] and repair [9]. This wide applicability to problems characterised by similar features to those found in SPL engineering, naturally suggests that SBSE will find successful applications in SPL optimisation. This observation has led to a recent upsurge in interest and activity in the area of `SBSE for SPL'.
 
 
-####5.3.2. A systematic literature review, Journal of Systems and Software
+####5.3.2. Web application testing: A systematic literature review
 
 #####Keywords:
 
