@@ -183,9 +183,9 @@ The tool used in the test obtains a detailed report of the bug or errors which i
 #####Keywords:
 
 * **Test Effectiveness:** Ratio between coverage percentages and number of test suits determine the effectiveness of tests.
-* **ii2. Generation of string data:** The paper presents a new approach to generate string test data. The technique uses program identifiers to construct web search queries for regular expressions that validate the format of a string type (such as an email address).
-* **iii3. Tokenisation:** A process of dividing a stream of texts into smaller elements known as tokens.
-* **iii4. Routine validation:** A program that accepts a value as an input and returns true if it is accepted and false if it is rejected.
+* **Generation of string data:** The paper presents a new approach to generate string test data. The technique uses program identifiers to construct web search queries for regular expressions that validate the format of a string type (such as an email address).
+* **Tokenisation:** A process of dividing a stream of texts into smaller elements known as tokens.
+* **Routine validation:** A program that accepts a value as an input and returns true if it is accepted and false if it is rejected.
 
 
 #####Baseline Results: 
@@ -205,14 +205,10 @@ The input validation problem has been addressed in the classic software testing 
 ####5.2.4. G. Wassermann, D. Yu, A. Chander, D. Dhurjati, H. Inamura and Z. Su, "Dynamic Test Input Generation for Web Applications," Proc. ACM/SIGSOFT Int',l Symp. Software Testing and Analysis, pp. 249-260, 2008.
 
 #####Keywords:
-<b>Generation of constraint selectively:</b>
-Generation of constraints in a selective manner is to channelize the focus of generation of constraints to those which are relevant to possible failures.</br>
-<b>Verifications:</b>
-It refers to the technique of verifying whether the constraints are satisfied.</br>
-<b>Concolic testing:</b>
-A software verification technique which uses both symbolic and concrete executions to generate test inputs to find all the execution paths possible.</br>
-<b>Reliability:</b>
-Refers to the ability of the system to perform a specific task for a relatively longer period of time.</br>
+* **Generation of constraint selectively:** Generation of constraints in a selective manner is to channelize the focus of generation of constraints to those which are relevant to possible failures.</br>
+* **Verifications:** It refers to the technique of verifying whether the constraints are satisfied.</br>
+* **Concolic testing:** A software verification technique which uses both symbolic and concrete executions to generate test inputs to find all the execution paths possible.</br>
+* **Reliability:** Refers to the ability of the system to perform a specific task for a relatively longer period of time.</br>
 
 
 <b>Motivation: </b>
@@ -279,7 +275,7 @@ The term \'Search Based Software Engineering\', coined in 2001 [1], refers to th
 
 #####Motivational statements: 
 
-The web has had a significant impact on all aspects of our society. As our society relies more and more on the web, the dependability of web applications has become increasingly important. To make these applications more dependable, for the past decade researchers have proposed various techniques for testing web-based software applications. This literature search for related studies retrieved 193 papers in the area of web application testing, which have appeared between 2000 and 2013. As this research area matures and the number of related papers increases, it is important to systematically identify, analyze, and classify the publications and provide an overview of the trends and empirical evidence in this specialized field. [2]
+The web has had a significant impact on all aspects of our society. As our society relies more and more on the web, the dependability of web applications has become increasingly important. To make these applications more dependable, for the past decade researchers have proposed various techniques for testing web-based software applications. This literature search for related studies retrieved 193 papers in the area of web application testing, which have appeared between 2000 and 2013. As this research area matures and the number of related papers increases, it is important to systematically identify, analyze, and classify the publications and provide an overview of the trends and empirical evidence in this specialized field. [20]
 
 #####Related Work: 
 
@@ -326,4 +322,4 @@ Finally the use of automated web application testing techniques has significantl
 17. M. Shahbaz, P. Mc Minn, M. Stevenson, Automated discovery of valid test strings from the web using dynamic regular expressions collation and natural language processing, in: Proceedings of the 12th International Conference on Quality Software (QSIC), 2012, pp. 79–88.</br>
 18. B. Beizer, Software Testing Techniques, International Thomson Computer Press, 1990.</br>
 19. C. Cadar and D. R. Engler. Execution generated test cases: How to make system code crash itself. In Model Checking Software, 12th International SPIN Workshop, pages 2–23, 2005. </br>
-20. f
+20. Serdar Doğan, Aysu Betin-Can, Vahid Garousi, Web application testing: A systematic literature review, Journal of Systems and Software, 91, p.174-201, May, 2014B. Korel. Automated software test data generation. IEEE Transactions on Software Engineering, 16(8):870–879, 1990. </br>
