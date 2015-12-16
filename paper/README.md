@@ -304,11 +304,11 @@ Finally the use of automated web application testing techniques has significantl
 
 ###7. References
 1. Nadia Alshahwan and Mark Harman. 2011. Automated Web Application Testing Using Search Based Software Engineering. In Proceedings of the 26th IEEE/ACM International Conference on Automated Software Engineering
-2. dsf
-3. fdf
+2. Ruilian Zhao, Micheal R. Lyu, Yinghu Min, 2009. Automatic string test data generation for detecting domain errors. In Journal Software Testing, Verification & Reliability, Volume 20 Issue 3, September 2010, Pages 209-236</br>
+3. Finding bugs in web applications using dynamic test generation and explicit state model checking. Shay Artzi, Adam Kiezun, Julian Dolby, Frank Tip, Daniel Dig, Amit Paradkar, and Michael D. Ernst.</br>
 4. William G.J. Halfond, Saswat Anand, and Alessandro Orso. Precise Interface Identification to Improve Testing and Analysis of Web Applications. In ISSTA ’09, pages 285–296, 2009
 5. G. Wassermann, D. Yu, A. Chander, D. Dhurjati, H. Inamura and Z. Su, "Dynamic Test Input Generation for Web Applications," Proc. ACM/SIGSOFT Int',l Symp. Software Testing and Analysis, pp. 249-260, 2008.
-6. fdffdfd
+6. Kitchenham, B., Charters, S., 2007. Guidelines for performing systematic literature reviews in software engineering. In: Evidence-Based Software Engineering.</br>
 7. Shahbaz, Muzammil, Phil McMinn, and Mark Stevenson. "Automatic generation of valid and invalid test data for string validation routines using web searches and regular expressions." Science of Computer Programming 97 (2015): 405-425.</br>
 8. SBSE for software product line engineering: a survey and directions for future work,M. Harman, Y. Jia, J. Krinke, W. B. Langdon, J. Petke & Y. Zhang CREST Centre, University College London, Malet Place, London, WC1E 6BT, U.K.</br>
 9. Garousi, V., Mesbah, A., Betin-Can, A., Mirshokraie, S., 2013. A systematic mapping of web application testing. Elsevier Journal of Information and Software Technology 55, 1374–1396.
